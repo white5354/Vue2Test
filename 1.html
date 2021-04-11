@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue实例</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <div id="app">
+    {{message}}
+    <span v-once>{{a}}</span>
+    <p v-html="html"></p>
+    <a v-bind:[attr]="url">我是跳转</a>
+  </div>
+  <script>
+    var data = {
+     message: '白云',
+     a: '等等',
+     html: '<h1>我是H1</h1>',
+     url: 'http://www.baidu.com',
+    }
+     
+    var app = new Vue({
+      el: "#app",
+      data: data,
+      created: () => {
+      }
+    })
+
+  </script>
+</body>
+</html>
